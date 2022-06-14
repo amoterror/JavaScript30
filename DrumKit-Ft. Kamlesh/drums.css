@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    color:white;
+}
+
+#drum-grid {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.key {
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+    transition: all 0.07s ease;
+}
+
+.active {
+    transform: scale(1.6);
+    border-color: blueviolet;
+}
+img {
+    width: 220px;
+    height: 220px;
+}
