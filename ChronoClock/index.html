@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="big-dial">
+        <h1 style="color:white">Amo's Chronograph</h1>  
+        <div class="hand min-hand">
+
+        </div>
+        <div class="hand hr-hand">
+
+        </div>
+        <div class="small-dial">
+            <div class="sec-hand">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const secH = document.querySelector('.sec-hand');
+        const minH = document.querySelector('.min-hand');        
+        const hrH = document.querySelector('.hr-hand');
+
+        function rotateH() {
+            const now = new Date();
+            
+            const secR = (now.getSeconds()/60)*360;
+            const minR = (now.getMinutes()/60)*360;
+            const hrR = ((now.getHours()/12)*360);
+            minH.style.transform = `rotate(${minR}deg)`;
+            secH.style.transform = `rotate(${secR}deg)`;
+            hrH.style.transform = `rotate(${hrR}deg)`;
+        }
+        setInterval(rotateH , 1000);
+    </script>
+</body>
+</html>
